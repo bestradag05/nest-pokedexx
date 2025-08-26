@@ -3,18 +3,21 @@ import { Document } from 'mongoose';
 
 @Schema()
 export class Pokemon extends Document {
-  // id: string // Mongo me lo da de forma automatico
-  @Prop({
-    unique: true,
-    index: true,
-  })
-  name: string;
 
-  @Prop({
-    unique: true,
-    index: true,
-  })
-  no: number;
+    // id: string // Mongo me lo da
+    @Prop({
+        unique: true,
+        index: true,
+    })
+    name: string;
+
+    @Prop({
+        unique: true,
+        index: true,
+    })
+    no: number;
+
 }
 
-export const PokemonSchema = SchemaFactory.createForClass(Pokemon);
+
+export const PokemonSchema = SchemaFactory.createForClass( Pokemon );
